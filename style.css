@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+p{
+    margin: 0;
+}
+
 :root {
     /* FONTES */
     --fonte-logo: 'Great Vibes', cursive;
@@ -41,6 +45,7 @@
     /* TAMANHOS */
     --altura-header: 90px;
     --largura-container: 1180px;
+    --largura-quadro: 1250px;
 }
 
 
@@ -274,6 +279,653 @@ footer {
 
 /* HOME */
 
+/*hero*/
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 560px;
+    background-color: var(--cor-fundo-site);
+    display: grid;
+    grid-template-columns: minmax(0, 55%) minmax(0, 45%);
+
+    overflow: hidden;
+}
+
+.folha-hero {
+    position: absolute;
+    left: -2%;
+    top: 8%;
+    width: clamp(160px, 21vw, 330px);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.folha-hero-2 {
+    position: absolute;
+    right: -2%;
+    top: 8%;
+    width: clamp(170px, 23vw, 300px);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.hero-esquerda {
+    position: relative;
+    z-index: 4;
+
+    /* AUMENTA A ÁREA REAL DA DIV */
+    width: 100%;
+    min-height: 560px;
+
+    /* controla onde o conteúdo começa */
+    padding: 58px 40px 55px clamp(120px, 13vw, 210px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    /* remove o margin que estava atrapalhando */
+    margin-left: 0;
+}
+
+.subtitulo-hero {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.subtitulo-hero span {
+    width: clamp(45px, 5vw, 70px);
+    height: 1px;
+    background-color: var(--cor-verde-medio);
+}
+
+.subtitulo-hero p {
+    font-family: var(--fonte-texto);
+    font-size: clamp(13px, 1.05vw, 16px);
+    letter-spacing: 4px;
+    color: var(--cor-verde-principal);
+    font-weight: 500;
+}
+
+.hero-esquerda h1 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(52px, 5vw, 76px);
+    line-height: 1.02;
+    color: var(--cor-verde-principal);
+    margin-bottom: 26px;
+}
+
+.divisor {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: clamp(260px, 24vw, 390px);
+    margin-bottom: 28px;
+}
+
+.divisor span {
+    flex: 1;
+    height: 1px;
+    background-color: var(--cor-linha-decorativa);
+}
+
+.divisor img {
+    width: 24px;
+    height: auto;
+}
+
+.descricao-hero {
+    max-width: 650px;
+    font-family: var(--fonte-texto);
+    font-size: clamp(16px, 1.25vw, 20px);
+    line-height: 1.75;
+    color: var(--cor-texto-principal);
+    margin-bottom: 16px;
+}
+
+.botoes-hero {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp,
+.btn-sobre {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-whatsapp {
+    gap: 12px;
+    padding: 17px 34px;
+    background-color: var(--cor-botao-verde);
+    color: var(--cor-botao-texto);
+}
+
+.btn-whatsapp img {
+    width: 22px;
+    height: 22px;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    background-color: var(--cor-botao-verde-hover);
+}
+
+.btn-sobre {
+    padding: 17px 34px;
+    color: var(--cor-verde-principal);
+    border: 1px solid var(--cor-verde-principal);
+    background-color: transparent;
+}
+
+.btn-sobre:hover {
+    transform: translateY(-3px);
+    background-color: var(--cor-verde-principal);
+    color: var(--cor-branco);
+}
+
+.hero-direita {
+    position: relative;
+    min-height: 560px;
+}
+
+.hero-imagem {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.hero-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero-imagem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        var(--cor-fundo-site) 0%,
+        rgba(248, 241, 232, 0.9) 35%,
+        rgba(248, 241, 232, 0.45) 65%,
+        rgba(248, 241, 232, 0) 100%
+    );
+    z-index: 2;
+}
+
+.ret-direita {
+    position: absolute;
+    right: clamp(25px, 4vw, 60px);
+    bottom: clamp(28px, 4vw, 45px);
+    width: min(330px, calc(100% - 40px));
+    background-color: var(--cor-fundo-card);
+    border-radius: 18px;
+    padding: 32px;
+    z-index: 6;
+    box-shadow: var(--sombra-suave);
+}
+
+.ret-direita img {
+    width: 38px;
+    height: auto;
+    margin-bottom: 14px;
+}
+
+.frase-ret-desc-cima {
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--cor-verde-principal);
+    margin-bottom: 10px;
+}
+
+.frase-ret-desc {
+    font-family: var(--fonte-texto);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--cor-texto-secundario);
+}
+
+@media (max-width: 1100px) {
+    .hero {
+        grid-template-columns: 62% 38%;
+    }
+
+    .hero-esquerda {
+        min-height: 560px;
+        padding-left: 90px;
+        padding-right: 30px;
+        margin-left: 0;
+    }
+
+    .hero-esquerda h1 {
+        font-size: clamp(46px, 5.5vw, 60px);
+    }
+
+    .descricao-hero {
+        max-width: 560px;
+        font-size: 16px;
+    }
+
+    .folha-hero {
+        width: 200px;
+    }
+
+    .folha-hero-2 {
+        width: 240px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .hero-esquerda {
+        min-height: auto;
+        padding: 70px 30px 50px;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .hero-esquerda h1 {
+        font-size: clamp(42px, 8vw, 56px);
+    }
+
+    .subtitulo-hero {
+        justify-content: center;
+    }
+
+    .divisor {
+        margin-left: auto;
+        margin-right: auto;
+        width: min(360px, 80%);
+    }
+
+    .descricao-hero {
+        max-width: 620px;
+        font-size: 16px;
+    }
+
+    .botoes-hero {
+        justify-content: center;
+    }
+
+    .hero-direita {
+        min-height: 460px;
+    }
+
+    .hero-imagem {
+        min-height: 460px;
+    }
+
+    .hero-imagem::before {
+        display: none;
+    }
+
+    .ret-direita {
+        left: 50%;
+        right: auto;
+        bottom: 25px;
+        width: min(340px, calc(100% - 40px));
+        transform: translateX(-50%);
+    }
+
+    .folha-hero {
+        left: -30px;
+        top: 20px;
+        width: 120px;
+        opacity: 0.55;
+    }
+
+    .folha-hero-2 {
+        right: -35px;
+        top: 25px;
+        width: 140px;
+        opacity: 0.55;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-esquerda {
+        padding: 55px 20px 40px;
+    }
+
+    .hero-esquerda h1 {
+        font-size: 38px;
+    }
+
+    .subtitulo-hero {
+        gap: 9px;
+    }
+
+    .subtitulo-hero span {
+        width: 34px;
+    }
+
+    .subtitulo-hero p {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .descricao-hero {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .botoes-hero {
+        width: 100%;
+        max-width: 320px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-whatsapp,
+    .btn-sobre {
+        width: 100%;
+    }
+
+    .hero-direita {
+        min-height: 400px;
+    }
+
+    .hero-imagem {
+        min-height: 400px;
+    }
+
+    .hero-imagem img {
+        object-position: center;
+    }
+
+    .ret-direita {
+        bottom: 18px;
+        padding: 22px;
+    }
+
+    .folha-hero {
+        width: 90px;
+    }
+
+    .folha-hero-2 {
+        width: 110px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-esquerda h1 {
+        font-size: 33px;
+    }
+
+    .hero-esquerda {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-direita {
+        min-height: 360px;
+    }
+
+    .hero-imagem {
+        min-height: 360px;
+    }
+
+    .ret-direita {
+        width: calc(100% - 28px);
+        padding: 18px;
+    }
+}
+/*hero*/
+
+/*rect-quadros*/
+.divisao{
+    width: 1px;
+    height: 280px;
+    background-color: var(--cor-linha-decorativa);
+    align-self: center;
+}
+
+.rect-quatro{
+    text-align: center;
+    max-width: var(--largura-quadro);
+    margin: 5% auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    outline: 1px var(--cor-linha-decorativa) solid;
+    border-radius: 10px;
+    background-color: #f1e9e2;
+}
+
+.quadro{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 220px;
+    min-height: 260px;
+    padding: 40px 22px;
+}
+
+.icone{
+    width: 150px;
+}
+
+.titulo-quadro{
+    margin-top: 18px;
+    font-size: 28px;   
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 600;
+    color: var(--cor-verde-principal); 
+    gap: 15px;
+    line-height: 1.3;
+}
+
+.descricao-quadro{
+    margin-top: 18px;
+    font-size: 18px;
+    gap: 20px;
+    line-height: 1.6;
+}
+
+.quadro-info{
+    display: flex;
+    flex-direction: column;
+    max-width: var(--largura-quadro);
+    margin: 3% auto 3%;
+    outline: 1px var(--cor-linha-decorativa) solid;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.parte-cima{
+    display: flex;
+}
+
+.whatsapp-info{
+    position: relative;
+    width: 150px;
+    height: auto;
+}
+
+.divisao-info{
+    justify-content: center;
+    width: var(--largura-quadro);
+    background-color: var(--cor-linha-decorativa);
+    margin-bottom: 26px;
+    height: 1px;
+}
+
+.rect-info-cima{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-left: 35px;
+    justify-content: center;
+}
+
+.rect-info-cima p {
+    margin: 0;
+}
+
+.rect-info-cima a {
+    margin-top: 22px;
+    width: 350px;
+    height: 70px;
+    font-size: 16px;
+}
+
+.rect-info-cima a img{
+    width: 40px;
+    height: auto;
+}
+
+.titulo-info{
+    font-size: 38px;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    color: var(--cor-verde-principal);
+}
+
+.descricao-info{
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+.parte-baixo{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px 0 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.parte-baixo-baixo {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.texto-baixo-baixo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.presencial,
+.online {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.titulo-atd{
+    font-size: 20px;
+    color: var(--cor-verde-principal);
+    font-weight: 500;
+}
+
+.desc-atd{
+    font-size: 20px;
+}
+
+.imagens-info{
+    position: relative;
+}
+
+.folha-esquerda-info {
+    position: absolute;
+    left: -10px;
+    bottom: 0;
+    width: 220px;
+}
+
+.folha-direita-info {
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 350px;
+}
+
+.folha-direita-baixo-info {
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 320px;
+}
+
+.quadro-decoracao{
+    position: relative;
+    display: flex;
+    width: var(--largura-quadro);
+    margin: 0 auto;
+    outline: 1px var(--cor-linha-decorativa) solid;
+    border-radius: 15px;
+    padding: 20px 0 20px;
+    overflow: hidden;   
+    align-items: center;
+    justify-content: center;
+}
+
+.frase-quadro-decoracao{
+    font-size: 35px;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 600;
+    color: var(--cor-verde-principal);
+    text-align: center;
+}
+
+.folha-decoracao-esquerda {
+    position: absolute;
+    left: -20px;
+    top: -17px;
+    width: 180px;
+}
+
+.folha-decoracao-direita {
+    position: absolute;
+    right: -20px;
+    top: -13px;
+    width: 180px;
+}
+
+.folhinha-decoracao{
+    width:70px;
+}
+/*rect-quadros*/
 
 
 /* SOBRE */
