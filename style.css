@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 :root {
     /* FONTES */
@@ -12,6 +13,7 @@
     --cor-verde-escuro: #2f462f;
     --cor-verde-medio: #5f7655;
     --cor-verde-claro: #aab79b;
+    --verde-card-suave: #E7E5D8;
 
     /* CORES DE FUNDO */
     --cor-fundo-site: #f8f1e8;
@@ -63,9 +65,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 7%;
+    padding: 8px 7%;
     position: relative;
     z-index: 10;
+    gap: 0px;
 }
 
 .logo_cabecalho {
@@ -83,7 +86,7 @@ header {
 }
 
 .nome {
-    margin-left: 14px;
+    margin-left: 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,7 +113,7 @@ header {
 .menu nav {
     display: flex;
     align-items: center;
-    gap: 42px;
+    gap: 22px;
 }
 
 .menu nav a {
@@ -183,8 +186,9 @@ footer {
     width: 100%;
     background-color: var(--cor-fundo-footer);
     color: var(--cor-texto-claro);
-    padding: 28px 7%;
     margin-top: 40px;
+    position: relative;
+    overflow: hidden;
 }
 
 .footer_container {
@@ -194,6 +198,8 @@ footer {
     grid-template-columns: 1.2fr 1fr 1fr;
     align-items: center;
     gap: 32px;
+    position: relative;
+    z-index: 2;
 }
 
 .footer_logo {
@@ -265,11 +271,48 @@ footer {
 
 .folha_footer {
     position: absolute;
-    right: 40px;
-    bottom: 0;
+    right: 2%;
+    top: 10%;
     width: 130px;
     opacity: 0.35;
     pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .menu nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    }
+
+    .menu nav a {
+        font-size: 10px;
+    }
+
+    .botao_whats {
+        display: none;
+    }
+
+    .folha_footer {
+        display: none;
+    }
+
+    .footer_frase {
+        display: none;
+    }
 }
 
 /* HOME */
@@ -281,10 +324,411 @@ footer {
 
 
 /* TRATAMENTOS */
+.intro-tratamentos {
+    position: relative;
+    padding: 60px 60px 180px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.conteudo-intro-tratamentos {
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.decoracao-esquerda {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 300px;
+    z-index: 1;
+}
+
+.decoracao-direita {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 300px;
+    z-index: 1;
+}
+
+.decoracao-esquerda img,
+.decoracao-direita img {
+    width: 100%;
+    display: block;
+}
+
+.tratamentos-titulo h1 {
+    font-family: var(--fonte-titulo);
+    font-weight: 800;
+    color: var(--cor-verde-principal);
+    font-size: 50px;
+}
+
+.tratamentos-linha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin: 18px auto 24px;
+}
+
+.tratamentos-linha span {
+    width: 230px;
+    height: 2px;
+    background-color: #d8d2bd;
+}
+
+.tratamentos-linha img {
+    width: 34px;
+    height: auto;
+}
+
+.tratamentos-texto {
+    font-size: 17px;
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-texto);
+    font-weight: 500;
+    line-height: 1.8;
+}
 
 
+.tratamento-titulo-areas {
+    color: var(--cor-texto-secundario);
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 18px;
+}
 
+.cards-tratamentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px;
+    margin-top: -100px;
+}
 
+@media (min-width: 1740px) {
+    .cards-tratamentos {
+        max-width: 1650px;
+        grid-template-columns: repeat(4, minmax(400px, 1fr));
+    }
+}
+
+.tratamento-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    border-color: var(--cor-borda-suave);
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 22px 20px;
+    width: 100%;
+    min-height: 160px;
+    background-color: var(--cor-fundo-card);
+    box-shadow: 0 6px 18px rgba(64, 90, 60, 0.06);
+}
+
+.tratamento-card img {
+    width: 96px;
+    height: auto;
+    margin-left: 0;
+    display: block;
+}
+
+.tratamento-icone {
+    flex: 0 0 96px;
+}
+
+.tratamento-info h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-verde-principal);
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 1.05;
+}
+
+.tratamento-info p {
+    font-family: var(--fonte-texto);
+    font-size: 13px;
+    color: var(--cor-texto-principal);
+    line-height: 1.65;
+}
+
+.tratamento-info span {
+    width: 100%;
+    max-width: 160px;
+    height: 1.5px;
+    background-color: #d8d2bd;
+    display: block;
+}
+
+.linha-cards {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.tratamentos-final {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.tratamentos-mensagem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding: 12px 22px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: var(--verde-card-suave);
+    min-height: 95px;
+    height: auto;
+    gap: 28px;
+}
+
+.tratamentos-mensagem-texto {
+    text-align: left;
+    line-height: 1.45;
+    margin-top: 0;
+    flex: 1;
+}
+
+.tratamentos-mensagem-texto h2 {
+    margin-bottom: 8px;
+    font-family: var(--fonte-titulo);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.tratamentos-mensagem-texto p {
+    font-family: var(--fonte-texto);
+    font-size: 14px;
+    max-width: 650px;
+}
+
+.tratamentos-mensagem-icone img {
+    height: 82px;
+}
+
+.tratamentos-mensagem-decoracao img {
+    height: 78px;
+    display: block;
+}
+
+.tratamentos-contato {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 16px 130px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 0px;
+    background-color: var(--cor-verde-claro);
+    min-height: 80px;
+    height: auto;
+    gap: 30px;
+}
+
+.tratamentos-contato-info {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.tratamentos-contato-texto {
+    text-align: left;
+    line-height: 1.45;
+    margin-top: 0;
+}
+
+.tratamentos-contato-texto h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-verde-principal);
+    font-size: 26px;
+}
+
+.tratamentos-contato-texto p {
+    font-family: var(--fonte-texto);
+    font-size: 14px;
+}
+
+.tratamentos-contato-icone img {
+    height: 60px;
+    display: block;
+}
+
+.tratamentos-contato-botao a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 22px;
+    border-radius: 999px;
+    background-color: var(--cor-botao-verde);
+    color: var(--cor-botao-texto);
+    font-family: var(--fonte-texto);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.tratamentos-contato-botao img {
+    width: 24px;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    .intro-tratamentos {
+        padding: 50px 35px 150px;
+    }
+
+    .cards-tratamentos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: -90px;
+    }
+
+    .tratamentos-mensagem,
+    .tratamentos-contato {
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .tratamentos-contato {
+        justify-content: space-between;
+    }
+
+    .tratamentos-mensagem-texto,
+    .tratamentos-contato-texto {
+        margin-top: 0;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .decoracao-esquerda,
+    .decoracao-direita {
+        width: 160px;
+        opacity: 0.35;
+    }
+
+    .tratamentos-titulo h1 {
+        font-size: 40px;
+    }
+
+    .tratamentos-linha span {
+        width: 110px;
+    }
+}
+
+@media (max-width: 500px) {
+    .intro-tratamentos {
+        padding: 40px 20px 100px;
+    }
+
+    .tratamentos-titulo h1 {
+        font-size: 36px;
+    }
+
+    .tratamentos-linha {
+        gap: 14px;
+    }
+
+    .tratamentos-linha span {
+        width: 80px;
+    }
+
+    .tratamentos-texto {
+        font-size: 15px;
+    }
+
+    .cards-tratamentos {
+        grid-template-columns: 1fr;
+        width: calc(100% - 28px);
+        margin-top: -55px;
+    }
+
+    .tratamento-card {
+        align-items: center;
+        gap: 14px;
+        min-height: 140px;
+        padding: 18px;
+    }
+
+    .tratamento-card img {
+        width: 80px;
+        margin-left: 0;
+    }
+
+    .tratamento-icone {
+        flex: 0 0 80px;
+    }
+
+    .tratamento-info span {
+        width: 130px;
+    }
+
+    .tratamentos-final {
+        width: calc(100% - 28px);
+    }
+
+    .tratamentos-mensagem,
+    .tratamentos-contato {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px 18px;
+        gap: 14px;
+    }
+
+    .tratamentos-mensagem-texto,
+    .tratamentos-contato-texto {
+        text-align: center;
+        padding: 0;
+    }
+
+    .tratamentos-contato-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tratamentos-contato-botao a {
+        white-space: normal;
+        padding: 12px 18px;
+    }
+
+    .tratamentos-mensagem-texto h2 {
+        font-size: 25px;
+    }
+
+    .tratamentos-mensagem-decoracao {
+        display: none;
+    }
+}
 /* DEPOIMENTOS */
 
 
