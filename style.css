@@ -200,11 +200,10 @@ footer {
 .footer_container {
     max-width: var(--largura-container);
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px 28px;
+    gap: 28px;
     padding: 18px 24px 20px;
     position: relative;
     z-index: 2;
@@ -241,7 +240,9 @@ footer {
 }
 
 .footer_contato {
-    display: contents;
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
 .footer_insta {
@@ -268,8 +269,7 @@ footer {
 }
 
 .footer_direitos {
-    grid-column: 1 / -1;
-    text-align: center;
+    text-align: left;
     font-family: var(--fonte-texto);
     font-size: 12px;
     line-height: 1.6;
@@ -283,6 +283,78 @@ footer {
     width: 130px;
     opacity: 0.35;
     pointer-events: none;
+}
+
+@media (min-width: 901px) {
+    .footer_container {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: minmax(260px, 1fr) minmax(220px, 0.8fr) minmax(260px, 1fr);
+        gap: 0;
+        min-height: 106px;
+        padding: 14px clamp(34px, 6vw, 88px) 16px;
+    }
+
+    .footer_logo {
+        justify-content: center;
+        padding-right: clamp(22px, 4vw, 48px);
+        border-right: 1px solid rgba(248, 241, 232, 0.48);
+    }
+
+    .footer_logo img {
+        width: 78px;
+    }
+
+    .footer_nome {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .footer_nome::after {
+        content: "TERAPEUTA TRG";
+        display: block;
+        margin-top: 8px;
+        font-family: var(--fonte-texto);
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+    }
+
+    .footer_frase {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 0 clamp(22px, 4vw, 48px);
+        border-right: 1px solid rgba(248, 241, 232, 0.48);
+    }
+
+    .footer_frase p {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .footer_contato {
+        justify-content: center;
+        gap: 22px;
+        padding-left: clamp(22px, 4vw, 48px);
+    }
+
+    .footer_insta img {
+        width: 30px;
+    }
+
+    .footer_direitos {
+        font-size: 10px;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .folha_footer {
+        right: 0;
+        top: 0;
+        width: 115px;
+        opacity: 0.28;
+    }
 }
 
 @media (max-width: 900px) {
@@ -322,8 +394,14 @@ footer {
     }
 
     .footer_container {
+        display: grid;
+        grid-template-columns: auto auto;
         gap: 10px 14px;
         padding: 18px 14px;
+    }
+
+    .footer_contato {
+        display: contents;
     }
 
     .footer_logo {
@@ -340,6 +418,11 @@ footer {
 
     .footer_insta img {
         width: 34px;
+    }
+
+    .footer_direitos {
+        grid-column: 1 / -1;
+        text-align: center;
     }
 }
 
@@ -379,7 +462,7 @@ footer {
     z-index: 4;
     width: 100%;
     min-height: 560px;
-    padding: 58px 40px 55px clamp(120px, 13vw, 210px);
+    padding: 58px 40px 55px clamp(150px, 16vw, 250px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -575,7 +658,7 @@ footer {
 
     .hero-esquerda {
         min-height: 560px;
-        padding-left: 90px;
+        padding-left: 120px;
         padding-right: 30px;
         margin-left: 0;
     }
@@ -822,6 +905,7 @@ footer {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    background-color: #f1e9e2;
 }
 
 .parte-cima{
@@ -956,6 +1040,7 @@ footer {
     overflow: hidden;   
     align-items: center;
     justify-content: center;
+    background-color: #f1e9e2;
 }
 
 .frase-quadro-decoracao{
@@ -1635,6 +1720,12 @@ body {
     font-weight: 500;
     text-decoration: none;
     white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sobre-contato-botao a:hover {
+    background-color: var(--cor-botao-verde-hover);
+    transform: translateY(-2px);
 }
 
 .sobre-contato-botao img {
@@ -2026,7 +2117,7 @@ body {
     overflow: hidden;
     border-radius: 10px;
     margin-top: 0px;
-    background-color: var(--cor-borda-suave);
+    background-color: var(--verde-card-suave);
     min-height: 80px;
     height: auto;
     gap: 30px;
@@ -2074,6 +2165,12 @@ body {
     font-weight: 500;
     text-decoration: none;
     white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tratamentos-contato-botao a:hover {
+    background-color: var(--cor-botao-verde-hover);
+    transform: translateY(-2px);
 }
 
 .tratamentos-contato-botao img {
@@ -2485,6 +2582,12 @@ body {
     position: absolute;
     right: 5%;
     bottom: 60px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.depoimentos-contato-botao a:hover {
+    background-color: var(--cor-botao-verde-hover);
+    transform: translateY(-2px);
 }
 
 .depoimentos-contato-botao img {
@@ -2776,6 +2879,30 @@ body {
     max-width: fit-content; 
     margin: 0 auto;
     gap: 100px;
+}
+
+.decoracao-contatos-esquerda,
+.decoracao-contatos-direita {
+    position: absolute;
+    width: clamp(150px, 15vw, 240px);
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.decoracao-contatos-esquerda {
+    left: 0;
+    top: 130px;
+}
+
+.decoracao-contatos-direita {
+    right: 0;
+    top: 125px;
+}
+
+.hero-contato > :not(.decoracao-contatos-esquerda):not(.decoracao-contatos-direita) {
+    position: relative;
+    z-index: 1;
 }
 
 .icone-contato{
@@ -3260,6 +3387,12 @@ body {
     font-weight: 500;
     text-decoration: none;
     white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.agendar-contato-botao a:hover {
+    background-color: var(--cor-botao-verde-hover);
+    transform: translateY(-2px);
 }
 
 .agendar-contato-botao img {
@@ -3397,6 +3530,11 @@ body {
         width: min(720px, calc(100% - 40px));
         margin-inline: auto;
         gap: 10px;
+    }
+
+    .decoracao-contatos-esquerda,
+    .decoracao-contatos-direita {
+        display: none;
     }
 
     .esquerda-contato {
@@ -3576,8 +3714,8 @@ body {
         align-items: stretch;
         width: calc(100% - 28px);
         height: auto;
-        min-height: 250px;
-        padding: 25px 18px 110px;
+        min-height: 0;
+        padding: 25px 18px;
         gap: 18px;
     }
 
@@ -3591,8 +3729,7 @@ body {
     }
 
     .agendar-contato-icone img {
-        width: 125px;
-        margin: 0;
+        display: none;
     }
 
     .agendar-contato-botao,
