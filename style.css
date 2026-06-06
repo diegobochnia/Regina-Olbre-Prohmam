@@ -1289,6 +1289,348 @@ footer {
 }
     /*contato*/
 
+    /* RESPONSIVIDADE - PAGINA SOBRE */
+
+.hero-sobre,
+.quadro-info-sobre,
+.descricao-sobre,
+.sobre-contato,
+.desc-sobre-direita {
+    box-sizing: border-box;
+}
+
+.conteudo-hero-sobre,
+.desc-sobre-esquerda,
+.desc-sobre-direita,
+.container-descricao-direita,
+.info-item-sobre {
+    min-width: 0;
+}
+
+/* computadores menores / notebooks */
+@media (max-width: 1440px) {
+    .hero-sobre,
+    .quadro-info-sobre,
+    .descricao-sobre {
+        width: calc(100% - 80px);
+    }
+
+    .folha-hero-sobre {
+        height: 420px;
+    }
+
+    .folha-hero-sobre-direita {
+        height: 500px;
+    }
+
+    .conteudo-hero-sobre h1 {
+        font-size: 44px;
+    }
+
+    .quadro-info-sobre {
+        max-width: 1180px;
+        gap: 10px;
+    }
+
+    .info-item-sobre {
+        height: auto;
+        min-height: 190px;
+        padding: 20px 8px;
+    }
+
+    .info-item-sobre img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .titulo-sobre-desc {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .desc-sobre-desc {
+        font-size: 15px;
+    }
+
+    .descricao-sobre {
+        gap: 45px;
+    }
+}
+
+/* notebooks menores */
+@media (max-width: 1200px) {
+    .hero-sobre {
+        align-items: center;
+        gap: 35px;
+    }
+
+    .conteudo-hero-sobre h1 {
+        font-size: 40px;
+    }
+
+    .descricao-hero-sobre {
+        font-size: 16px;
+    }
+
+    .folha-hero-sobre {
+        height: 340px;
+        opacity: 0.45;
+    }
+
+    .folha-hero-sobre-direita {
+        height: 400px;
+        opacity: 0.45;
+    }
+
+    .quadro-info-sobre {
+        width: calc(100% - 60px);
+        max-width: 1000px;
+        gap: 0;
+        padding: 20px;
+    }
+
+    .info-item-sobre {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        min-height: 180px;
+        padding: 15px;
+    }
+
+    .info-item-sobre img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .divisao-info-sobre {
+        height: 130px;
+    }
+
+    .descricao-sobre {
+        width: calc(100% - 60px);
+        gap: 35px;
+    }
+
+    .desc-sobre-esquerda {
+        max-width: 520px;
+    }
+
+    .desc-sobre-esquerda h2 {
+        font-size: 38px;
+    }
+
+    .desc-sobre-direita h3 {
+        font-size: 30px;
+    }
+}
+
+/* tablets */
+@media (max-width: 900px) {
+    .hero-sobre-container {
+        padding: 45px 0 70px;
+    }
+
+    .hero-sobre {
+        width: calc(100% - 40px);
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0 10px;
+    }
+
+    .hero-sobre > * {
+        flex-shrink: 1;
+        max-width: 100%;
+    }
+
+    .conteudo-hero-sobre h1 {
+        font-size: 36px;
+    }
+
+    .divisor-sobre-cima,
+    .divisor-sobre-baixo,
+    .divisao-descricao {
+        margin: 0 auto;
+    }
+
+    .divisor-sobre-baixo span {
+        width: 120px;
+    }
+
+    .folha-hero-sobre,
+    .folha-hero-sobre-direita {
+        display: none;
+    }
+
+    .quadro-info-sobre {
+        flex-direction: column;
+        width: calc(100% - 40px);
+        padding: 24px;
+    }
+
+    .info-item-sobre {
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+        min-height: auto;
+        padding: 18px 0;
+        gap: 18px;
+    }
+
+    .divisao-info-sobre {
+        display: none;
+    }
+
+    .descricao-sobre {
+        width: calc(100% - 40px);
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        margin-top: 55px;
+        margin-bottom: 55px;
+    }
+
+    .desc-sobre-esquerda {
+        max-width: 100%;
+    }
+
+    .container-descricao-direita {
+        width: 100%;
+    }
+
+    .desc-sobre-direita {
+        width: 100%;
+        padding: 26px;
+    }
+
+    .imagem-desc-direita {
+        width: 260px;
+        right: -85px;
+        top: 10px;
+        opacity: 0.35;
+    }
+
+    .sobre-contato {
+        width: calc(100% - 40px);
+        max-width: none;
+        flex-direction: column;
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .sobre-contato-info {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .sobre-contato-texto {
+        text-align: center;
+    }
+}
+
+/* celulares */
+@media (max-width: 600px) {
+    .hero-sobre {
+        width: calc(100% - 28px);
+    }
+
+    .conteudo-hero-sobre h1 {
+        font-size: 31px;
+    }
+
+    .descricao-hero-sobre {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .divisor-sobre-cima,
+    .divisor-sobre-baixo,
+    .divisao-descricao {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .divisor-sobre-cima span,
+    .divisor-sobre-baixo span,
+    .divisao-descricao span {
+        flex: 1;
+        width: auto;
+    }
+
+    .quadro-info-sobre {
+        width: calc(100% - 28px);
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .info-item-sobre {
+        align-items: flex-start;
+    }
+
+    .info-item-sobre img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .titulo-sobre-desc {
+        font-size: 17px;
+    }
+
+    .desc-sobre-desc {
+        font-size: 15px;
+    }
+
+    .descricao-sobre {
+        width: calc(100% - 28px);
+    }
+
+    .desc-sobre-esquerda h2 {
+        font-size: 31px;
+    }
+
+    .desc-sobre-esquerda p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .desc-sobre-direita {
+        padding: 22px 16px;
+    }
+
+    .desc-sobre-direita h3 {
+        font-size: 27px;
+    }
+
+    .item-lista-desc {
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .item-lista-desc img {
+        width: 34px;
+    }
+
+    .imagem-desc-direita {
+        width: 220px;
+        right: -110px;
+        top: 20px;
+        opacity: 0.28;
+    }
+
+    .sobre-contato {
+        width: calc(100% - 28px);
+        padding: 22px 18px;
+    }
+
+    .sobre-contato-texto h2 {
+        font-size: 23px;
+    }
+
+    .sobre-contato-botao a {
+        width: 100%;
+        white-space: normal;
+    }
+}
+
 /* SOBRE*/
 
 
