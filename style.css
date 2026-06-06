@@ -1868,3 +1868,888 @@ body {
 
 
 /* CONTATO */
+.hero-contato{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    max-width: fit-content; 
+    margin: 0 auto;
+    gap: 100px;
+}
+
+.icone-contato{
+    width: 90px;
+}
+
+.esquerda-contato{
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-desc-contato{
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.divisor-contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.divisor-contato span {
+    flex: 1;
+    height: 1px;
+    background-color: var(--cor-linha-decorativa);
+}
+
+.divisor-contato img {
+    width: 28px;
+    height: auto;
+}
+
+.lista-contato{
+    display: flex;
+    flex-direction: row;
+}
+
+.item-lista-contato{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-contato{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--cor-verde-principal);
+}
+
+.container-lista-contato {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: clamp(14px, 2vw, 20px);
+}
+
+
+.lista-contato {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--cor-borda-suave);
+}
+
+.lista-contato:last-child {
+    border-bottom: none;
+}
+
+.item-lista-contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-item-contato{
+    font-weight: 600;
+    color: var(--cor-verde-principal);
+}
+
+.contato{
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.frase-ctt{
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.container-desc-contato{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.descricao-contato{
+    font-size: 18px;
+}
+
+.lista-contato:nth-child(2) .item-lista-contato {
+    max-width: 24ch;
+}
+
+
+
+.secao-formulario {
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.card-formulario {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 45px 40px 35px;
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 18px;
+    background-color: #fffdf9;
+}
+
+.titulo-formulario {
+    margin: 0;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--cor-verde-principal);
+}
+
+.divisor-formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 230px;
+    margin: 15px auto 35px;
+}
+
+.divisor-formulario span {
+    flex: 1;
+    height: 1px;
+    background-color: var(--cor-linha-decorativa);
+}
+
+.divisor-formulario img {
+    width: 28px;
+    height: auto;
+}
+
+.formulario-whatsapp {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-formulario {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+.input-formulario,
+.textarea-formulario {
+    width: 100%;
+    padding: 18px 20px;
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 10px;
+    outline: none;
+    background-color: transparent;
+    color: #333;
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-formulario {
+    min-height: 58px;
+}
+
+.textarea-formulario {
+    min-height: 180px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.input-formulario:focus,
+.textarea-formulario:focus {
+    border-color: var(--cor-verde-principal);
+    box-shadow: 0 0 0 3px rgba(65, 100, 66, 0.12);
+}
+
+.botao-formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+    min-height: 58px;
+    margin-top: 5px;
+    padding: 14px 28px;
+    border: 0;
+    border-radius: 999px;
+    background-color: var(--cor-verde-principal);
+    color: #fff;
+    font-family: var(--fonte-texto);
+    font-size: 17px;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.botao-formulario:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.botao-formulario:active {
+    transform: translateY(0);
+}
+
+.icone-botao-formulario {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.aviso-formulario {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 28px;
+    padding: 18px 22px;
+    border-radius: 12px;
+    background-color: #f3f0e8;
+}
+
+.icone-aviso-formulario {
+    width: 34px;
+    height: auto;
+}
+
+.texto-aviso-formulario {
+    font-family: var(--fonte-texto);
+    color: #333;
+}
+
+.texto-aviso-formulario strong {
+    font-size: 14px;
+}
+
+.texto-aviso-formulario p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .secao-formulario {
+        padding: 35px 14px;
+    }
+
+    .card-formulario {
+        padding: 32px 20px 25px;
+    }
+
+    .titulo-formulario {
+        font-size: 34px;
+    }
+
+    .textarea-formulario {
+        min-height: 150px;
+    }
+}
+
+
+/*atendimentos*/
+.agendar-esquerda h3{
+    color: var(--cor-verde-principal);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.agendar{
+    display: grid;
+    grid-template-columns: minmax(0, 65%) minmax(0, 35%);
+    max-width: var(--largura-quadro);
+    margin: 0 auto;
+    outline: 1px var(--cor-borda-suave) solid;
+    border-radius: 18px;
+    min-height: 330px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.agendar-direita{
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.agendar-direita img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.agendar-direita::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        var(--cor-fundo-site) 0%,
+        rgba(248, 241, 232, 0.9) 35%,
+        rgba(248, 241, 232, 0.45) 65%,
+        rgba(248, 241, 232, 0) 100%
+    );
+    z-index: 2;
+}
+
+.agendar-esquerda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px 90px;
+}
+
+.container-conteudo-atendimentos{
+    display: flex;
+    flex-direction: row;
+}
+
+.conteudo-atendimento{
+    display: flex;
+    flex-direction: row;
+}
+
+.icone-atendimento{
+    width: 120px;
+}
+
+.desc-atendimentos {
+    max-width: 28ch;
+    line-height: 1.5;
+}
+
+.titulo-atendimentos{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 650;
+    color: var(--cor-verde-principal);
+    font-size: 30px;
+}
+
+.subtitulo-atendimentos{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.divisor-atendimento-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    gap: 10px;
+    margin: 10px 20px;
+}
+
+.divisor-atendimento-conteudo span {
+    width: 1px;
+    flex: 1;
+    background-color: var(--cor-borda-suave);
+}
+
+.divisor-atendimento-conteudo img {
+    width: 20px;
+    height: auto;
+}
+
+
+/*atendimentos*/
+.agendar-contato {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--largura-quadro);
+    height: 140px;
+    min-height: 0;
+    margin: 50px auto;
+    padding: 20px 55px;
+    gap: 40px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 18px;
+    background-color: var(--cor-borda-suave);
+}
+
+.agendar-contato-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    padding-left: 175px;
+}
+
+.agendar-contato-icone {
+    position: absolute;
+    left: 15px;
+    bottom: -20px;
+    width: 175px;
+    height: 150px;
+    pointer-events: none;
+}
+
+.agendar-contato-icone img {
+    display: block;
+    width: 190px;
+    max-width: none;
+    height: auto;
+    margin-left: -20px;
+    margin-top: -10px;
+}
+
+.agendar-contato-texto {
+    min-width: 0;
+    text-align: left;
+    line-height: 1.45;
+}
+
+.agendar-contato-texto h2 {
+    margin: 0 0 8px;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-verde-principal);
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.agendar-contato-texto p {
+    margin: 0;
+    font-family: var(--fonte-texto);
+    font-size: 17px;
+}
+
+.agendar-contato-botao {
+    flex-shrink: 0;
+}
+
+.agendar-contato-botao a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 300px;
+    padding: 17px 28px;
+    border-radius: 999px;
+    background-color: var(--cor-botao-verde);
+    color: var(--cor-botao-texto);
+    font-family: var(--fonte-texto);
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.agendar-contato-botao img {
+    width: 28px;
+    height: auto;
+}
+
+/*responsividade*/
+/* CORREÇÕES BASE NECESSÁRIAS */
+
+.hero-contato,
+.hero-contato *,
+.agendar,
+.agendar *,
+.agendar-contato,
+.agendar-contato * {
+    box-sizing: border-box;
+}
+
+.hero-contato {
+    width: min(1200px, calc(100% - 48px));
+    max-width: none;
+    margin-inline: auto;
+    justify-content: center;
+    gap: clamp(40px, 6vw, 100px);
+}
+
+.hero-contato > * {
+    min-width: 0;
+}
+
+.esquerda-contato {
+    flex: 1 1 0;
+    max-width: 520px;
+}
+
+.secao-formulario {
+    flex: 1 1 0;
+    width: auto;
+    max-width: 620px;
+    padding-inline: 0;
+}
+
+.card-formulario {
+    box-sizing: border-box;
+}
+
+.input-formulario,
+.textarea-formulario {
+    box-sizing: border-box;
+}
+
+.agendar,
+.agendar-contato {
+    width: min(var(--largura-quadro), calc(100% - 48px));
+}
+
+/* COMPUTADORES GRANDES */
+
+@media (min-width: 1600px) {
+    .hero-contato {
+        width: min(1250px, calc(100% - 80px));
+    }
+
+    .agendar,
+    .agendar-contato {
+        width: min(var(--largura-quadro), calc(100% - 80px));
+    }
+}
+
+/* NOTEBOOKS, TELAS MENORES E ZOOM DE 125% */
+
+@media (max-width: 1280px) {
+    .hero-contato {
+        width: calc(100% - 48px);
+        gap: 45px;
+    }
+
+    .icone-contato {
+        width: 70px;
+        flex-shrink: 0;
+    }
+
+    .agendar {
+        width: calc(100% - 48px);
+        grid-template-columns: minmax(0, 68%) minmax(0, 32%);
+    }
+
+    .agendar-esquerda {
+        padding: 20px 16px 55px;
+    }
+
+    .container-conteudo-atendimentos {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .presencial,
+    .online {
+        display: flex;
+        align-items: center;
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .icone-atendimento {
+        width: 90px;
+        flex-shrink: 0;
+    }
+
+    .titulo-atendimentos {
+        font-size: 26px;
+    }
+
+    .divisor-atendimento-conteudo {
+        margin-inline: 12px;
+    }
+
+    .agendar-contato {
+        width: calc(100% - 48px);
+        padding-right: 30px;
+    }
+
+    .agendar-contato-botao a {
+        min-width: 230px;
+    }
+}
+
+/* TABLETS E NOTEBOOKS COM MUITO ZOOM */
+
+@media (max-width: 1000px) {
+    .hero-contato {
+        flex-direction: column;
+        align-items: center;
+        width: min(720px, calc(100% - 40px));
+        margin-inline: auto;
+        gap: 10px;
+    }
+
+    .esquerda-contato {
+        width: 100%;
+        max-width: none;
+        margin-top: 30px;
+    }
+
+    .secao-formulario {
+        width: 100%;
+        max-width: none;
+        padding: 25px 0 50px;
+    }
+
+    .card-formulario {
+        max-width: 100%;
+    }
+
+    .agendar {
+        grid-template-columns: 1fr;
+        width: calc(100% - 40px);
+    }
+
+    .agendar-direita {
+        min-height: 300px;
+        border-radius: 0 0 18px 18px;
+    }
+
+    .agendar-direita::before {
+        width: 100%;
+        height: 35%;
+        background: linear-gradient(
+            to bottom,
+            var(--cor-fundo-site) 0%,
+            rgba(248, 241, 232, 0.75) 45%,
+            transparent 100%
+        );
+    }
+
+    .agendar-contato {
+        width: calc(100% - 40px);
+        height: auto;
+        min-height: 140px;
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .agendar-contato-info {
+        padding-left: 135px;
+    }
+
+    .agendar-contato-icone {
+        width: 135px;
+    }
+
+    .agendar-contato-icone img {
+        width: 150px;
+    }
+
+    .agendar-contato-botao a {
+        min-width: 200px;
+        padding: 15px 20px;
+        font-size: 15px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 700px) {
+    .hero-contato {
+        width: calc(100% - 28px);
+        margin-inline: auto;
+    }
+
+    .esquerda-contato {
+        padding: 0;
+    }
+
+    .titulo-contato,
+    .titulo-formulario {
+        font-size: 34px;
+    }
+
+    .descricao-contato {
+        font-size: 16px;
+    }
+
+    .divisor-contato {
+        width: min(300px, 100%);
+    }
+
+    .lista-contato {
+        gap: 14px;
+        padding: 16px 0;
+    }
+
+    .icone-contato {
+        width: 56px;
+    }
+
+    .contato {
+        font-size: 17px;
+    }
+
+    .secao-formulario {
+        padding: 20px 0 40px;
+    }
+
+    .card-formulario {
+        padding: 30px 18px 24px;
+    }
+
+    .divisor-formulario {
+        width: min(230px, 80%);
+    }
+
+    .input-formulario,
+    .textarea-formulario {
+        padding: 15px 16px;
+    }
+
+    .textarea-formulario {
+        min-height: 150px;
+    }
+
+    .agendar {
+        width: calc(100% - 28px);
+        margin: 35px auto 50px;
+    }
+
+    .agendar-esquerda {
+        padding: 20px 16px 35px;
+    }
+
+    .agendar-esquerda h3 {
+        font-size: 34px;
+    }
+
+    .container-conteudo-atendimentos {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .presencial,
+    .online {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .icone-atendimento {
+        width: 72px;
+    }
+
+    .desc-atendimentos {
+        max-width: 100%;
+    }
+
+    .divisor-atendimento-conteudo {
+        flex-direction: row;
+        align-self: auto;
+        width: 100%;
+        margin: 22px 0;
+    }
+
+    .divisor-atendimento-conteudo span {
+        width: auto;
+        height: 1px;
+        flex: 1;
+    }
+
+    .agendar-direita {
+        min-height: 230px;
+    }
+
+    .agendar-contato {
+        flex-direction: column;
+        align-items: stretch;
+        width: calc(100% - 28px);
+        height: auto;
+        min-height: 250px;
+        padding: 25px 18px 110px;
+        gap: 18px;
+    }
+
+    .agendar-contato-info {
+        padding-left: 0;
+    }
+
+    .agendar-contato-icone {
+        left: 8px;
+        bottom: -30px;
+    }
+
+    .agendar-contato-icone img {
+        width: 125px;
+        margin: 0;
+    }
+
+    .agendar-contato-botao,
+    .agendar-contato-botao a {
+        width: 100%;
+    }
+
+    .agendar-contato-botao a {
+        min-width: 0;
+        white-space: normal;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+    .hero-contato {
+        width: calc(100% - 24px);
+    }
+
+    .lista-contato {
+        align-items: flex-start;
+    }
+
+    .icone-contato {
+        width: 48px;
+    }
+
+    .card-formulario {
+        padding-inline: 14px;
+    }
+
+    .presencial,
+    .online {
+        align-items: flex-start;
+    }
+
+    .icone-atendimento {
+        width: 60px;
+    }
+
+    .titulo-atendimentos {
+        font-size: 23px;
+    }
+}
+
+.lista-contato {
+    position: relative;
+    border-bottom: none;
+}
+
+.lista-contato:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60%;
+    height: 1px;
+    transform: translateX(-50%);
+    background-color: var(--cor-borda-suave);
+}
