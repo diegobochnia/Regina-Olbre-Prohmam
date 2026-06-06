@@ -30,7 +30,7 @@ O objetivo do projeto é apresentar a profissional, seus serviços, informaçõe
 
 ## Link do projeto
 
-[Acesse aqui](https://diegobochnia.github.io/Regina-Olbre-Prohmam/index.html)
+[![Acesse o site](https://img.shields.io/badge/Acessar%20site-Terapeuta%20Regina-405A3C?style=for-the-badge)](https://diegobochnia.github.io/Regina-Olbre-Prohmam/index.html)
 
 ## Imagens do projeto
 
