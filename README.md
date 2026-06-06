@@ -82,12 +82,12 @@ Além disso, o projeto permitiu praticar a organização de arquivos, o uso de H
 
 ### Wellington Nery G. Costa
 
-[![GitHub](https://img.shields.io/badge/GitHub-WellingtonNery-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/WellingtonNery)
+[![GitHub](https://img.shields.io/badge/GitHub-WellingtonNery-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/WellingtonNery)  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Wellington%20Costa-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wellington-costa-178966366/)
 
 ### Diego Rhian Bochnia
 
-[![GitHub](https://img.shields.io/badge/GitHub-diegobochnia-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/diegobochnia)
+[![GitHub](https://img.shields.io/badge/GitHub-diegobochnia-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/diegobochnia)  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Diego%20Bochnia-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/diego-bochnia/)
 
 ## Direitos
