@@ -1,6 +1,6 @@
 # Terapeuta Regina
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-green)
 
 Este site foi desenvolvido com o propósito de servir como um portfólio profissional da terapeuta Regina Olbre Prohmam.
 
